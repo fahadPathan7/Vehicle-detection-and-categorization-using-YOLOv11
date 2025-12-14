@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Video files (except sample)
+*.mp4
+*.avi
+*.mov
+*.mkv
+!Input/Test*.mp4
+
+# Model files (if too large)
+# *.pt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files
+Output/*
+!Output/.gitkeep
+

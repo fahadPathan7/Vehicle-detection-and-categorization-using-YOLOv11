@@ -103,6 +103,11 @@ Vehicle Detection/
 │   └── yolo11l.pt                  # YOLO11 Large model weights
 ├── Output/
 │   └── output.mp4                  # Processed output video
+├── .streamlit/
+│   └── config.toml                 # Streamlit configuration
+├── app.py                          # Streamlit web application
+├── requirements.txt                # Python dependencies
+├── run.sh                          # Run script for Streamlit app
 └── README.md                       # This file
 ```
 
@@ -164,14 +169,61 @@ Vehicle Detection/
 - Urban planning and traffic flow analysis
 - Security and surveillance applications
 
+## 🌐 Streamlit Web Application
+
+The project includes a Streamlit web application for easy video processing through a user-friendly interface.
+
+### Features
+- 📤 **Video Upload**: Simple drag-and-drop interface for video files
+- ⚙️ **Real-time Processing**: Progress bar and status updates during processing
+- 📥 **Download Results**: Download processed video with annotations
+- 🧹 **Automatic Cleanup**: Remove temporary files after processing
+- 🎨 **Modern UI**: Clean and intuitive interface
+
+### Running the Streamlit App
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Run the Application**:
+   ```bash
+   streamlit run app.py
+   ```
+   
+   Or use the provided script:
+   ```bash
+   ./run.sh
+   ```
+
+3. **Access the App**:
+   - The app will open automatically in your browser
+   - Default URL: `http://localhost:8501`
+
+### Usage
+1. Upload a video file (MP4, AVI, MOV, MKV)
+2. Click "Process Video" to start detection and tracking
+3. Wait for processing to complete (progress bar shows status)
+4. Download the processed video with vehicle annotations
+5. Clean up temporary files (optional)
+
+### App Structure
+- **Home Page**: Single page with all functionality
+- **Video Info**: Displays resolution, FPS, frame count, and duration
+- **Processing**: Real-time progress updates
+- **Download**: One-click download of processed video
+- **Credits**: Footer with developer information
+
 ## 📝 Requirements
 
 - Python 3.7+
+- Streamlit (for web app)
 - Ultralytics YOLO
 - OpenCV (cv2)
 - PyTorch (for GPU support)
 - NumPy
-- SciPy
+- Pillow
 
 ## 🎓 Key Concepts Explained
 
